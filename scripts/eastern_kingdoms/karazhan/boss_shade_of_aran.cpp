@@ -1,4 +1,4 @@
-/* Copyright (C) 2006 - 2013 ScriptDev2 <http://www.scriptdev2.com/>
+/* This file is part of the ScriptDev2 Project. See AUTHORS file for Copyright information
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
@@ -206,7 +206,7 @@ struct MANGOS_DLL_DECL boss_aranAI : public ScriptedAI
             return;
 
         // Start drinking when below 20% mana
-        if (!m_bIsDrinking && m_creature->getPowerType() == POWER_MANA && (m_creature->GetPower(POWER_MANA) * 100 / m_creature->GetMaxPower(POWER_MANA)) < 20)
+        if (!m_bIsDrinking && m_creature->GetPowerType() == POWER_MANA && (m_creature->GetPower(POWER_MANA) * 100 / m_creature->GetMaxPower(POWER_MANA)) < 20)
         {
             if (DoCastSpellIfCan(m_creature, SPELL_MASS_POLYMORPH) == CAST_OK)
             {
